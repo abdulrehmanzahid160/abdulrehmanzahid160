@@ -28,9 +28,9 @@
   
   <br/><br/>
   
-  <img src="https://komarev.com/ghpvc/?username=abdulrehmanzahid160&color=purple&style=flat-square&label=Profile+Views" />
+  <img src="https://komarev.com/ghpvc/?username=abdulrehmanzahid160&color=8b5cf6&style=flat-square&label=Profile+Views" />
   <img src="https://img.shields.io/github/followers/abdulrehmanzahid160?color=indigo&label=Followers&style=flat-square" />
-  <img src="https://img.shields.io/github/stars/abdulrehmanzahid160?color=violet&label=Stars&style=flat-square" />
+  <img src="https://img.shields.io/github/stars/abdulrehmanzahid160?affiliations=OWNER&color=violet&label=Stars&style=flat-square" />
 </div>
 
 ---
@@ -213,7 +213,7 @@ With experience spanning Flutter app development, robust Spring Boot & FastAPI b
 ## GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.herokuapp.com/?username=abdulrehmanzahid160&theme=tokyonight" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=abdulrehmanzahid160&theme=tokyonight" width="100%" />
 </div>
 
 ---
