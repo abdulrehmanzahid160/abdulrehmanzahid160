@@ -1,0 +1,53 @@
+name: Generate Profile Cards
+
+# Renders the SVG cards in assets/ from the GitHub API and commits them back.
+#
+# Token: the default GITHUB_TOKEN is scoped to this repository only, so it
+# cannot see contributions in other repos (private ones in particular). Add a
+# fine-grained PAT as the secret PROFILE_TOKEN with read access to your
+# repositories and the numbers will include everything. Without it the workflow
+# still runs, just on public data.
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Warn if the profile token is missing
+        if: ${{ !secrets.PROFILE_TOKEN }}
+        run: |
+          echo "::warning::PROFILE_TOKEN is not set - cards will show public data only."
+          echo "Add a fine-grained PAT with read access to your repositories as the"
+          echo "repository secret PROFILE_TOKEN to include private contributions."
+
+      - name: Render cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: node scripts/generate.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "Regenerate profile cards"
+          git push
