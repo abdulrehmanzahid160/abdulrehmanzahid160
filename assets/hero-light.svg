@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="280" viewBox="0 0 1000 280" role="img" fill="none">
+  <defs>
+    <linearGradient id="brand-hlight" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="55%" stop-color="#DB2777"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="sweep-hlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0891B2" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow-hlight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-hlight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#0891B2" stop-opacity="0.05600000000000001"/>
+      <stop offset="100%" stop-color="#0891B2" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots-hlight" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#7C3AED" opacity="0.09"/>
+    </pattern>
+    <clipPath id="clip-hlight">
+      <rect x="0.5" y="0.5" width="999" height="279" rx="16"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-hlight)">
+    <rect width="1000" height="280" fill="#FFFFFF"/>
+    <rect width="1000" height="280" fill="url(#dots-hlight)"/>
+    <ellipse cx="80" cy="-14" rx="300" ry="173.6" fill="url(#glow-hlight)"/>
+    <ellipse cx="970" cy="294" rx="240" ry="168" fill="url(#glow2-hlight)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="999" height="279" rx="16"
+        fill="none" stroke="#D1D9E0"/>
+  <g>
+    <text x="46" y="62" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="12.5" letter-spacing="3.4"
+          fill="#59636E">NUTECH ISLAMABAD &#183; BS ARTIFICIAL INTELLIGENCE</text>
+
+    <text x="44" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="62" font-weight="700"
+          fill="url(#brand-hlight)" letter-spacing="-1.5">Abdul Rehman</text>
+
+    <g class="roles"><text x="46" y="196" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="19" fill="#0891B2" class="role r0">AI / ML Engineer</text><text x="46" y="196" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="19" fill="#0891B2" class="role r1">Full-Stack Developer</text><text x="46" y="196" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="19" fill="#0891B2" class="role r2">Flutter Developer</text><text x="46" y="196" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="19" fill="#0891B2" class="role r3">Agentic AI &amp; MCP</text></g>
+
+    <text x="46" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="15" fill="#59636E">
+      I build systems that have to be right &#8212; regulated data, offline-first apps, agent tooling.
+    </text>
+  </g>
+  <g opacity="0.95"><line x1="720" y1="89.0" x2="812" y2="72.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="89.0" x2="812" y2="72.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.00s"/><line x1="720" y1="89.0" x2="812" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="89.0" x2="812" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.37s"/><line x1="720" y1="89.0" x2="812" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="89.0" x2="812" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.74s"/><line x1="720" y1="89.0" x2="812" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="89.0" x2="812" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.11s"/><line x1="720" y1="89.0" x2="812" y2="208.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="89.0" x2="812" y2="208.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.48s"/><line x1="720" y1="123.0" x2="812" y2="72.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="123.0" x2="812" y2="72.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.85s"/><line x1="720" y1="123.0" x2="812" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="123.0" x2="812" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.22s"/><line x1="720" y1="123.0" x2="812" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="123.0" x2="812" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.59s"/><line x1="720" y1="123.0" x2="812" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="123.0" x2="812" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.96s"/><line x1="720" y1="123.0" x2="812" y2="208.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="123.0" x2="812" y2="208.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.33s"/><line x1="720" y1="157.0" x2="812" y2="72.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="157.0" x2="812" y2="72.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.70s"/><line x1="720" y1="157.0" x2="812" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="157.0" x2="812" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.07s"/><line x1="720" y1="157.0" x2="812" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="157.0" x2="812" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.44s"/><line x1="720" y1="157.0" x2="812" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="157.0" x2="812" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.81s"/><line x1="720" y1="157.0" x2="812" y2="208.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="157.0" x2="812" y2="208.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.18s"/><line x1="720" y1="191.0" x2="812" y2="72.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="191.0" x2="812" y2="72.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.55s"/><line x1="720" y1="191.0" x2="812" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="191.0" x2="812" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.92s"/><line x1="720" y1="191.0" x2="812" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="191.0" x2="812" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.29s"/><line x1="720" y1="191.0" x2="812" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="191.0" x2="812" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.66s"/><line x1="720" y1="191.0" x2="812" y2="208.0" stroke="#D1D9E0" stroke-width="1"/><line x1="720" y1="191.0" x2="812" y2="208.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.03s"/><line x1="812" y1="72.0" x2="904" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="72.0" x2="904" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.40s"/><line x1="812" y1="72.0" x2="904" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="72.0" x2="904" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.77s"/><line x1="812" y1="72.0" x2="904" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="72.0" x2="904" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.14s"/><line x1="812" y1="106.0" x2="904" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="106.0" x2="904" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.51s"/><line x1="812" y1="106.0" x2="904" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="106.0" x2="904" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.88s"/><line x1="812" y1="106.0" x2="904" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="106.0" x2="904" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.25s"/><line x1="812" y1="140.0" x2="904" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="140.0" x2="904" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.62s"/><line x1="812" y1="140.0" x2="904" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="140.0" x2="904" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:0.99s"/><line x1="812" y1="140.0" x2="904" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="140.0" x2="904" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.36s"/><line x1="812" y1="174.0" x2="904" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="174.0" x2="904" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.73s"/><line x1="812" y1="174.0" x2="904" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="174.0" x2="904" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.10s"/><line x1="812" y1="174.0" x2="904" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="174.0" x2="904" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.47s"/><line x1="812" y1="208.0" x2="904" y2="106.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="208.0" x2="904" y2="106.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:3.84s"/><line x1="812" y1="208.0" x2="904" y2="140.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="208.0" x2="904" y2="140.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:1.21s"/><line x1="812" y1="208.0" x2="904" y2="174.0" stroke="#D1D9E0" stroke-width="1"/><line x1="812" y1="208.0" x2="904" y2="174.0" stroke="#7C3AED" stroke-width="1.4" class="edge" style="animation-delay:2.58s"/><circle cx="720" cy="89.0" r="4.5" fill="#FFFFFF" stroke="#0891B2" stroke-width="1.6" class="node" style="animation-delay:0s"/><circle cx="720" cy="123.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:2.11s"/><circle cx="720" cy="157.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:1.22s"/><circle cx="720" cy="191.0" r="4.5" fill="#FFFFFF" stroke="#0891B2" stroke-width="1.6" class="node" style="animation-delay:0.33s"/><circle cx="812" cy="72.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:2.44s"/><circle cx="812" cy="106.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:1.55s"/><circle cx="812" cy="140.0" r="4.5" fill="#FFFFFF" stroke="#0891B2" stroke-width="1.6" class="node" style="animation-delay:0.66s"/><circle cx="812" cy="174.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:2.77s"/><circle cx="812" cy="208.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:1.88s"/><circle cx="904" cy="106.0" r="4.5" fill="#FFFFFF" stroke="#0891B2" stroke-width="1.6" class="node" style="animation-delay:0.99s"/><circle cx="904" cy="140.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:0.1s"/><circle cx="904" cy="174.0" r="4.5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6" class="node" style="animation-delay:2.21s"/></g>
+  
+  <g clip-path="url(#clip-hlight)">
+    <rect class="sweep" x="0" y="0" width="450" height="2" fill="url(#sweep-hlight)"/>
+  </g>
+  <style>
+    .sweep { animation: sweep-hlight 7s cubic-bezier(.45,0,.25,1) infinite; }
+    @keyframes sweep-hlight {
+      0%   { transform: translateX(-450px); }
+      100% { transform: translateX(1000px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .sweep { animation: none; opacity: .5; } }
+  </style>
+  <style>
+    .role { opacity: 0; animation: cycle-hlight 14s linear infinite; }
+    .r0 { animation-delay: 0s; }  .r1 { animation-delay: 3.5s; }
+    .r2 { animation-delay: 7s; }  .r3 { animation-delay: 10.5s; }
+    @keyframes cycle-hlight {
+      0%    { opacity: 0; transform: translateY(6px); }
+      3%    { opacity: 1; transform: translateY(0); }
+      22%   { opacity: 1; transform: translateY(0); }
+      25%   { opacity: 0; transform: translateY(-6px); }
+      100%  { opacity: 0; transform: translateY(-6px); }
+    }
+    .edge { stroke-dasharray: 10 46; stroke-dashoffset: 56; opacity: .38;
+            animation: flow-hlight 3.4s linear infinite; }
+    @keyframes flow-hlight { to { stroke-dashoffset: 0; } }
+    .node { animation: pulse-hlight 3.4s ease-in-out infinite; }
+    @keyframes pulse-hlight {
+      0%, 100% { opacity: .55; }
+      50%      { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .role { animation: none; } .r0 { opacity: 1; }
+      .edge, .node { animation: none; opacity: .7; }
+    }
+  </style>
+</svg>
