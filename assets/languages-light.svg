@@ -17,7 +17,7 @@
              font-size="10.5" fill="#94A3B8">BY BYTES &#183; 20 REPOSITORIES</text>
   <line x1="32" y1="56" x2="968" y2="56" stroke="#E2E8F0"/>
   <rect x="36" y="66" width="928" height="10" rx="2" fill="#F8FAFC"/>
-  <rect x="36.0" y="66" width="344.2" height="10" rx="2" fill="#00B4AB"/><rect x="381.7" y="66" width="210.5" height="10" rx="2" fill="#3178c6"/><rect x="593.8" y="66" width="156.9" height="10" rx="2" fill="#e34c26"/><rect x="752.1" y="66" width="64.1" height="10" rx="2" fill="#3572A5"/><rect x="817.7" y="66" width="30.1" height="10" rx="2" fill="#DA5B0B"/><rect x="849.3" y="66" width="26.8" height="10" rx="2" fill="#f34b7d"/><rect x="877.6" y="66" width="22.2" height="10" rx="2" fill="#663399"/><rect x="901.3" y="66" width="20.7" height="10" rx="2" fill="#DA3434"/><rect x="923.5" y="66" width="39.0" height="10" rx="2" fill="#94A3B8"/>
+  <rect x="36.0" y="66" width="344.5" height="10" rx="2" fill="#00B4AB"/><rect x="382.0" y="66" width="210.7" height="10" rx="2" fill="#3178c6"/><rect x="594.2" y="66" width="157.0" height="10" rx="2" fill="#e34c26"/><rect x="752.8" y="66" width="64.2" height="10" rx="2" fill="#3572A5"/><rect x="818.4" y="66" width="30.1" height="10" rx="2" fill="#DA5B0B"/><rect x="850.0" y="66" width="26.8" height="10" rx="2" fill="#f34b7d"/><rect x="878.3" y="66" width="22.2" height="10" rx="2" fill="#663399"/><rect x="902.0" y="66" width="20.7" height="10" rx="2" fill="#DA3434"/><rect x="924.3" y="66" width="38.2" height="10" rx="2" fill="#94A3B8"/>
   
     <g>
       <rect x="36" y="107" width="9" height="9" rx="2" fill="#00B4AB"/>
@@ -31,7 +31,7 @@
       <text x="362.3333333333333" y="116" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#0F172A">TypeScript</text>
       <text x="624.6666666666666" y="116" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="11.5" fill="#475569">22.8%</text>
+            font-size="11.5" fill="#475569">22.9%</text>
     </g>
     <g>
       <rect x="654.6666666666666" y="107" width="9" height="9" rx="2" fill="#e34c26"/>
@@ -59,7 +59,7 @@
       <text x="671.6666666666666" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#0F172A">C++</text>
       <text x="934" y="144" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="11.5" fill="#475569">3.0%</text>
+            font-size="11.5" fill="#475569">3.1%</text>
     </g>
     <g>
       <rect x="36" y="163" width="9" height="9" rx="2" fill="#663399"/>
@@ -80,6 +80,6 @@
       <text x="671.6666666666666" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#0F172A">Other</text>
       <text x="934" y="172" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="11.5" fill="#475569">4.4%</text>
+            font-size="11.5" fill="#475569">4.3%</text>
     </g>
 </svg>
