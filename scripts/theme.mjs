@@ -33,6 +33,16 @@ export const THEMES = {
   },
 };
 
+// A separate, warmer palette for the banner and mascot — those are meant to
+// read as a friendly greeting, not a data surface, so they get their own
+// gradient rather than borrowing the austere card palette above.
+export const BRAND = {
+  g1: "#4F46E5", // indigo
+  g2: "#7C3AED", // violet
+  g3: "#DB2777", // pink
+  ink: "#1E1B4B",
+};
+
 export const SANS =
   "-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif";
 export const MONO =

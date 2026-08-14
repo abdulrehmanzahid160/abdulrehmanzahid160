@@ -29,6 +29,7 @@ query ($login: String!) {
   user(login: $login) {
     name
     login
+    avatarUrl(size: 200)
     followers { totalCount }
     following { totalCount }
     repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
@@ -97,8 +98,19 @@ function streaks(weeks) {
   return { longest, current, activeDays: active, days };
 }
 
+/** Downloads the avatar and inlines it as a data: URI, so the banner SVG has
+ * no external reference that can rot or get proxy-cached in a broken state. */
+async function inlineAvatar(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`avatar fetch ${res.status}`);
+  const mime = res.headers.get("content-type") || "image/png";
+  const buf = Buffer.from(await res.arrayBuffer());
+  return `data:${mime};base64,${buf.toString("base64")}`;
+}
+
 export async function collect(login, token) {
   const prof = (await gql(PROFILE, { login }, token)).user;
+  const avatarDataUri = await inlineAvatar(prof.avatarUrl);
 
   let cursor = null;
   const repos = [];
@@ -137,6 +149,7 @@ export async function collect(login, token) {
   return {
     name: prof.name || prof.login,
     login: prof.login,
+    avatarDataUri,
     followers: prof.followers.totalCount,
     publicRepos: prof.repositories.totalCount,
     totalRepos: prof.allRepos.totalCount,

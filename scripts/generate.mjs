@@ -9,7 +9,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { collect } from "./fetch-stats.mjs";
 import { THEMES } from "./theme.mjs";
-import { hero, stats, languages, heatmap } from "./cards.mjs";
+import { banner, mascot, stats, languages, heatmap } from "./cards.mjs";
 
 const LOGIN = process.env.PROFILE_LOGIN || "abdulrehmanzahid160";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -19,19 +19,27 @@ if (!TOKEN) {
   process.exit(1);
 }
 
-const CARDS = { hero, stats, languages, heatmap };
+// Theme-dependent cards: one dark + one light variant, switched in the
+// README via <picture prefers-color-scheme>.
+const THEMED_CARDS = { stats, languages, heatmap };
 
 const data = await collect(LOGIN, TOKEN);
 await mkdir("assets", { recursive: true });
 
 const written = [];
-for (const [name, render] of Object.entries(CARDS)) {
+for (const [name, render] of Object.entries(THEMED_CARDS)) {
   for (const theme of Object.values(THEMES)) {
     const file = `assets/${name}-${theme.name}.svg`;
     await writeFile(file, render(theme, data), "utf8");
     written.push(file);
   }
 }
+
+// The banner and mascot carry their own fixed gradient palette (a deliberate
+// choice distinct from the data cards above) and render once, not per theme.
+await writeFile("assets/banner.svg", banner(data), "utf8");
+await writeFile("assets/mascot.svg", mascot(), "utf8");
+written.push("assets/banner.svg", "assets/mascot.svg");
 
 await writeFile(
   "assets/stats.json",
