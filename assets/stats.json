@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-14T07:05:32.409Z",
-  "commitsYear": 172,
-  "contributionsYear": 192,
+  "generatedAt": "2026-08-14T07:16:03.739Z",
+  "commitsYear": 176,
+  "contributionsYear": 196,
   "totalRepos": 20,
   "publicRepos": 15,
   "stars": 4,
@@ -12,35 +12,35 @@
   "topLanguages": [
     {
       "name": "Dart",
-      "pct": 37.49
+      "pct": 37.25
     },
     {
       "name": "TypeScript",
-      "pct": 22.99
+      "pct": 22.85
     },
     {
       "name": "HTML",
-      "pct": 17.18
+      "pct": 17.07
     },
     {
       "name": "Python",
-      "pct": 7.11
+      "pct": 7.07
     },
     {
       "name": "Jupyter Notebook",
-      "pct": 3.42
+      "pct": 3.4
     },
     {
       "name": "C++",
-      "pct": 3.07
+      "pct": 3.05
     },
     {
       "name": "CSS",
-      "pct": 2.57
+      "pct": 2.55
     },
     {
       "name": "CMake",
-      "pct": 2.41
+      "pct": 2.4
     }
   ]
 }

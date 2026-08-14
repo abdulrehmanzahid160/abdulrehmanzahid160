@@ -1,128 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="232" viewBox="0 0 1000 232" role="img" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="206" viewBox="0 0 1000 206" role="img" fill="none">
   <defs>
-    <linearGradient id="brand-ldark" x1="0" y1="0" x2="1" y2="0.6">
-      <stop offset="0%" stop-color="#A855F7"/>
-      <stop offset="55%" stop-color="#F472B6"/>
-      <stop offset="100%" stop-color="#22D3EE"/>
-    </linearGradient>
-    <linearGradient id="sweep-ldark" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#A855F7" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#A855F7" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="glow-ldark" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.13"/>
-      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glow2-ldark" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.10400000000000001"/>
-      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots-ldark" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1.5" fill="#8B5CF6" opacity="0.07"/>
-    </pattern>
     <clipPath id="clip-ldark">
-      <rect x="0.5" y="0.5" width="999" height="231" rx="16"/>
+      <rect x="0.5" y="0.5" width="999" height="205" rx="10"/>
     </clipPath>
   </defs>
   <g clip-path="url(#clip-ldark)">
-    <rect width="1000" height="232" fill="#0D1117"/>
-    <rect width="1000" height="232" fill="url(#dots-ldark)"/>
-    <ellipse cx="80" cy="-11.600000000000001" rx="300" ry="143.84" fill="url(#glow-ldark)"/>
-    <ellipse cx="970" cy="243.60000000000002" rx="240" ry="139.2" fill="url(#glow2-ldark)"/>
+    <rect width="1000" height="206" fill="#0D1117"/>
+    <rect x="0" y="0" width="3" height="206" fill="#818CF8"/>
   </g>
-  <rect x="0.5" y="0.5" width="999" height="231" rx="16"
-        fill="none" stroke="#1F2732"/>
-  <text x="34" y="40" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="17" font-weight="600"
+  <rect x="0.5" y="0.5" width="999" height="205" rx="10"
+        fill="none" stroke="#21262D"/>
+  
+  <text x="36" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="15" font-weight="600"
         fill="#E6EDF3">Languages</text>
-  <text x="966" y="40" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11"
-        fill="#6E7681">by bytes across 20 repositories</text>
-  <rect x="34" y="70" width="932" height="18" rx="4" fill="#131A26"/>
-  <rect x="34.0" y="70" width="347.4" height="18"
-             rx="4" fill="#00B4AB"/><rect x="383.4" y="70" width="212.3" height="18"
-             rx="4" fill="#3178c6"/><rect x="597.7" y="70" width="158.1" height="18"
-             rx="4" fill="#e34c26"/><rect x="757.8" y="70" width="64.3" height="18"
-             rx="4" fill="#3572A5"/><rect x="824.1" y="70" width="29.9" height="18"
-             rx="4" fill="#DA5B0B"/><rect x="856.0" y="70" width="26.6" height="18"
-             rx="4" fill="#f34b7d"/><rect x="884.6" y="70" width="21.9" height="18"
-             rx="4" fill="#663399"/><rect x="908.5" y="70" width="20.5" height="18"
-             rx="4" fill="#DA3434"/><rect x="931.0" y="70" width="33.0" height="18"
-             rx="4" fill="#6E7681"/>
+  <text x="968" y="42" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+             font-size="10.5" fill="#6E7681">BY BYTES &#183; 20 REPOSITORIES</text>
+  <line x1="32" y1="56" x2="968" y2="56" stroke="#21262D"/>
+  <rect x="36" y="66" width="928" height="10" rx="2" fill="#151B23"/>
+  <rect x="36.0" y="66" width="344.2" height="10" rx="2" fill="#00B4AB"/><rect x="381.7" y="66" width="210.5" height="10" rx="2" fill="#3178c6"/><rect x="593.8" y="66" width="156.9" height="10" rx="2" fill="#e34c26"/><rect x="752.1" y="66" width="64.1" height="10" rx="2" fill="#3572A5"/><rect x="817.7" y="66" width="30.1" height="10" rx="2" fill="#DA5B0B"/><rect x="849.3" y="66" width="26.8" height="10" rx="2" fill="#f34b7d"/><rect x="877.6" y="66" width="22.2" height="10" rx="2" fill="#663399"/><rect x="901.3" y="66" width="20.7" height="10" rx="2" fill="#DA3434"/><rect x="923.5" y="66" width="39.0" height="10" rx="2" fill="#6E7681"/>
   
     <g>
-      <rect x="34" y="116" width="11" height="11" rx="3" fill="#00B4AB"/>
-      <text x="54" y="126" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="36" y="107" width="9" height="9" rx="2" fill="#00B4AB"/>
+      <text x="53" y="116" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">Dart</text>
-      <text x="318.6666666666667" y="126" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">37.5%</text>
+      <text x="315.3333333333333" y="116" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">37.3%</text>
     </g>
     <g>
-      <rect x="344.6666666666667" y="116" width="11" height="11" rx="3" fill="#3178c6"/>
-      <text x="364.6666666666667" y="126" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="345.3333333333333" y="107" width="9" height="9" rx="2" fill="#3178c6"/>
+      <text x="362.3333333333333" y="116" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">TypeScript</text>
-      <text x="629.3333333333334" y="126" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">23.0%</text>
+      <text x="624.6666666666666" y="116" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">22.8%</text>
     </g>
     <g>
-      <rect x="655.3333333333334" y="116" width="11" height="11" rx="3" fill="#e34c26"/>
-      <text x="675.3333333333334" y="126" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="654.6666666666666" y="107" width="9" height="9" rx="2" fill="#e34c26"/>
+      <text x="671.6666666666666" y="116" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">HTML</text>
-      <text x="940" y="126" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">17.2%</text>
+      <text x="934" y="116" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">17.1%</text>
     </g>
     <g>
-      <rect x="34" y="146" width="11" height="11" rx="3" fill="#3572A5"/>
-      <text x="54" y="156" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="36" y="135" width="9" height="9" rx="2" fill="#3572A5"/>
+      <text x="53" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">Python</text>
-      <text x="318.6666666666667" y="156" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">7.1%</text>
+      <text x="315.3333333333333" y="144" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">7.1%</text>
     </g>
     <g>
-      <rect x="344.6666666666667" y="146" width="11" height="11" rx="3" fill="#DA5B0B"/>
-      <text x="364.6666666666667" y="156" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="345.3333333333333" y="135" width="9" height="9" rx="2" fill="#DA5B0B"/>
+      <text x="362.3333333333333" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">Jupyter Notebook</text>
-      <text x="629.3333333333334" y="156" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">3.4%</text>
+      <text x="624.6666666666666" y="144" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">3.4%</text>
     </g>
     <g>
-      <rect x="655.3333333333334" y="146" width="11" height="11" rx="3" fill="#f34b7d"/>
-      <text x="675.3333333333334" y="156" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="654.6666666666666" y="135" width="9" height="9" rx="2" fill="#f34b7d"/>
+      <text x="671.6666666666666" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">C++</text>
-      <text x="940" y="156" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">3.1%</text>
+      <text x="934" y="144" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">3.0%</text>
     </g>
     <g>
-      <rect x="34" y="176" width="11" height="11" rx="3" fill="#663399"/>
-      <text x="54" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="36" y="163" width="9" height="9" rx="2" fill="#663399"/>
+      <text x="53" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">CSS</text>
-      <text x="318.6666666666667" y="186" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">2.6%</text>
+      <text x="315.3333333333333" y="172" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">2.6%</text>
     </g>
     <g>
-      <rect x="344.6666666666667" y="176" width="11" height="11" rx="3" fill="#DA3434"/>
-      <text x="364.6666666666667" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="345.3333333333333" y="163" width="9" height="9" rx="2" fill="#DA3434"/>
+      <text x="362.3333333333333" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">CMake</text>
-      <text x="629.3333333333334" y="186" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">2.4%</text>
+      <text x="624.6666666666666" y="172" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">2.4%</text>
     </g>
     <g>
-      <rect x="655.3333333333334" y="176" width="11" height="11" rx="3" fill="#6E7681"/>
-      <text x="675.3333333333334" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="13.5"
+      <rect x="654.6666666666666" y="163" width="9" height="9" rx="2" fill="#6E7681"/>
+      <text x="671.6666666666666" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="12.5"
             fill="#E6EDF3">Other</text>
-      <text x="940" y="186" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
-            font-size="12.5" fill="#8B949E">3.8%</text>
+      <text x="934" y="172" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+            font-size="11.5" fill="#9198A1">4.4%</text>
     </g>
-  
-  <g clip-path="url(#clip-ldark)">
-    <rect class="sweep" x="0" y="0" width="450" height="2" fill="url(#sweep-ldark)"/>
-  </g>
-  <style>
-    .sweep { animation: sweep-ldark 11s cubic-bezier(.45,0,.25,1) infinite; }
-    @keyframes sweep-ldark {
-      0%   { transform: translateX(-450px); }
-      100% { transform: translateX(1000px); }
-    }
-    @media (prefers-reduced-motion: reduce) { .sweep { animation: none; opacity: .5; } }
-  </style>
-
 </svg>

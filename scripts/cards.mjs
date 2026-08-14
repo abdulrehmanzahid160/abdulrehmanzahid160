@@ -1,112 +1,88 @@
-import { SANS, MONO, esc, human, frame, topSweep } from "./theme.mjs";
+import { SANS, MONO, esc, human, frame, cardTitle } from "./theme.mjs";
 
 const svg = (w, h, body) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" ` +
   `viewBox="0 0 ${w} ${h}" role="img" fill="none">${body}\n</svg>\n`;
 
+const PAD = 32;
+
 /* ------------------------------------------------------------------ hero */
 
-const ROLES = [
-  "AI / ML Engineer",
-  "Full-Stack Developer",
-  "Flutter Developer",
-  "Agentic AI &amp; MCP",
-];
+const ROLES = ["Full-stack developer", "Flutter developer", "AI / ML engineer"];
 
-/** Small neural graph, signal pulsing left to right. */
-function neuralGraph(t, x, y) {
-  const layers = [
-    [0, 1, 2, 3],
-    [0, 1, 2, 3, 4],
-    [0, 1, 2],
-  ];
-  const colX = [0, 92, 184];
-  const spread = 34;
-  const pos = layers.map((nodes, li) =>
-    nodes.map((_, ni) => ({
-      x: x + colX[li],
-      y: y + (ni - (nodes.length - 1) / 2) * spread,
-    }))
-  );
-
-  let edges = "";
-  let e = 0;
-  for (let li = 0; li < pos.length - 1; li++) {
-    for (const a of pos[li]) {
-      for (const b of pos[li + 1]) {
-        const delay = ((e * 137) % 400) / 100;
-        const geom = `x1="${a.x}" y1="${a.y.toFixed(1)}" x2="${b.x}" y2="${b.y.toFixed(1)}"`;
-        edges +=
-          `<line ${geom} stroke="${t.stroke}" stroke-width="1"/>` +
-          `<line ${geom} stroke="${t.brandA}" stroke-width="1.4" class="edge" ` +
-          `style="animation-delay:${delay.toFixed(2)}s"/>`;
-        e++;
-      }
-    }
+/**
+ * Weekly contribution sparkline. Real data, drawn plainly — it says more about
+ * the person than a decorative graphic does.
+ */
+function sparkline(t, days, x, y, w, h) {
+  const weeks = [];
+  for (let i = 0; i < days.length; i += 7) {
+    weeks.push(days.slice(i, i + 7).reduce((a, d) => a + d.contributionCount, 0));
   }
+  const max = Math.max(...weeks, 1);
+  const step = w / Math.max(weeks.length - 1, 1);
 
-  let nodes = "";
-  pos.flat().forEach((p, i) => {
-    nodes +=
-      `<circle cx="${p.x}" cy="${p.y.toFixed(1)}" r="4.5" fill="${t.bg}" ` +
-      `stroke="${i % 3 === 0 ? t.brandB : t.brandA}" stroke-width="1.6" ` +
-      `class="node" style="animation-delay:${((i * 211) % 300) / 100}s"/>`;
-  });
+  const pts = weeks.map((v, i) => [x + i * step, y + h - (v / max) * h]);
+  const line = pts
+    .map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`)
+    .join(" ");
+  const area = `${line} L${(x + w).toFixed(1)} ${y + h} L${x} ${y + h} Z`;
+  const last = pts[pts.length - 1];
 
-  return `<g opacity="0.95">${edges}${nodes}</g>`;
+  return `
+  <g>
+    <path d="${area}" fill="${t.accentSoft}"/>
+    <path d="${line}" fill="none" stroke="${t.accent}" stroke-width="1.6"
+          stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="3" fill="${t.accent}"/>
+    <line x1="${x}" y1="${y + h + 0.5}" x2="${x + w}" y2="${y + h + 0.5}" stroke="${t.line}"/>
+    <text x="${x}" y="${y + h + 20}" font-family="${MONO}" font-size="10"
+          fill="${t.faint}">52 WEEKS</text>
+    <text x="${x + w}" y="${y + h + 20}" text-anchor="end" font-family="${MONO}"
+          font-size="10" fill="${t.faint}">CONTRIBUTIONS / WEEK</text>
+  </g>`;
 }
 
 export function hero(t, d) {
   const w = 1000;
-  const h = 280;
+  const h = 220;
   const id = `h${t.name}`;
+
   const roles = ROLES.map(
     (r, i) =>
-      `<text x="46" y="196" font-family="${MONO}" font-size="19" ` +
-      `fill="${t.brandB}" class="role r${i}">${r}</text>`
+      `<text x="${PAD + 4}" y="152" font-family="${SANS}" font-size="17" ` +
+      `fill="${t.accent}" class="role r${i}">${r}</text>`
   ).join("");
 
   return svg(
     w,
     h,
     `${frame(t, w, h, id)}
-  <g>
-    <text x="46" y="62" font-family="${MONO}" font-size="12.5" letter-spacing="3.4"
-          fill="${t.muted}">NUTECH ISLAMABAD &#183; BS ARTIFICIAL INTELLIGENCE</text>
+  <text x="${PAD + 4}" y="52" font-family="${MONO}" font-size="10.5" letter-spacing="2.6"
+        fill="${t.faint}">NUTECH ISLAMABAD &#183; BS ARTIFICIAL INTELLIGENCE &#183; YEAR 2</text>
 
-    <text x="44" y="140" font-family="${SANS}" font-size="62" font-weight="700"
-          fill="url(#brand-${id})" letter-spacing="-1.5">${esc(d.name)}</text>
+  <text x="${PAD + 2}" y="112" font-family="${SANS}" font-size="46" font-weight="700"
+        fill="${t.ink}" letter-spacing="-1">${esc(d.name)}</text>
 
-    <g class="roles">${roles}</g>
+  <g class="roles">${roles}</g>
 
-    <text x="46" y="240" font-family="${SANS}" font-size="15" fill="${t.muted}">
-      I build systems that have to be right &#8212; regulated data, offline-first apps, agent tooling.
-    </text>
-  </g>
-  ${neuralGraph(t, 720, 140)}
-  ${topSweep(w, id)}
+  <text x="${PAD + 4}" y="190" font-family="${SANS}" font-size="14" fill="${t.muted}">
+    I build systems where being approximately right is the same as being wrong.
+  </text>
+
+  ${sparkline(t, d.calendar, 640, 62, 320, 92)}
   <style>
-    .role { opacity: 0; animation: cycle-${id} 14s linear infinite; }
-    .r0 { animation-delay: 0s; }  .r1 { animation-delay: 3.5s; }
-    .r2 { animation-delay: 7s; }  .r3 { animation-delay: 10.5s; }
+    .role { opacity: 0; animation: cycle-${id} 12s linear infinite; }
+    .r0 { animation-delay: 0s; } .r1 { animation-delay: 4s; } .r2 { animation-delay: 8s; }
     @keyframes cycle-${id} {
-      0%    { opacity: 0; transform: translateY(6px); }
-      3%    { opacity: 1; transform: translateY(0); }
-      22%   { opacity: 1; transform: translateY(0); }
-      25%   { opacity: 0; transform: translateY(-6px); }
-      100%  { opacity: 0; transform: translateY(-6px); }
-    }
-    .edge { stroke-dasharray: 10 46; stroke-dashoffset: 56; opacity: .38;
-            animation: flow-${id} 3.4s linear infinite; }
-    @keyframes flow-${id} { to { stroke-dashoffset: 0; } }
-    .node { animation: pulse-${id} 3.4s ease-in-out infinite; }
-    @keyframes pulse-${id} {
-      0%, 100% { opacity: .55; }
-      50%      { opacity: 1; }
+      0%   { opacity: 0; }
+      4%   { opacity: 1; }
+      29%  { opacity: 1; }
+      33%  { opacity: 0; }
+      100% { opacity: 0; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .role { animation: none; } .r0 { opacity: 1; }
-      .edge, .node { animation: none; opacity: .7; }
+      .role { animation: none; opacity: 0; } .r0 { opacity: 1; }
     }
   </style>`
   );
@@ -116,7 +92,7 @@ export function hero(t, d) {
 
 export function stats(t, d) {
   const w = 1000;
-  const h = 214;
+  const h = 176;
   const id = `s${t.name}`;
 
   const tiles = [
@@ -128,24 +104,24 @@ export function stats(t, d) {
     ["Longest streak", `${d.longestStreak}d`, `${d.activeDays} active days`],
   ];
 
-  const padX = 34;
-  const gap = 14;
-  const tw = (w - padX * 2 - gap * (tiles.length - 1)) / tiles.length;
+  const gap = 1;
+  const tw = (w - PAD * 2 - gap * (tiles.length - 1)) / tiles.length;
 
   const body = tiles
     .map(([label, value, sub], i) => {
-      const x = padX + i * (tw + gap);
-      return `
-    <g class="tile">
-      <rect x="${x}" y="62" width="${tw}" height="112" rx="12"
-            fill="${t.tile}" stroke="${t.tileStroke}"/>
-      <rect x="${x}" y="62" width="${tw}" height="2.5" rx="1.2" fill="url(#brand-${id})" opacity=".85"/>
-      <text x="${x + 18}" y="96" font-family="${MONO}" font-size="11" letter-spacing="1.5"
-            fill="${t.muted}">${label.toUpperCase()}</text>
-      <text x="${x + 18}" y="136" font-family="${SANS}" font-size="32" font-weight="700"
-            fill="${t.text}">${value}</text>
-      <text x="${x + 18}" y="158" font-family="${SANS}" font-size="11.5"
-            fill="${t.faint}">${sub}</text>
+      const x = PAD + i * (tw + gap);
+      const divider =
+        i > 0
+          ? `<line x1="${x - 0.5}" y1="66" x2="${x - 0.5}" y2="146" stroke="${t.line}"/>`
+          : "";
+      return `${divider}
+    <g>
+      <text x="${x + 14}" y="84" font-family="${MONO}" font-size="9.5" letter-spacing="1.2"
+            fill="${t.faint}">${label.toUpperCase()}</text>
+      <text x="${x + 13}" y="120" font-family="${SANS}" font-size="29" font-weight="700"
+            fill="${t.ink}">${value}</text>
+      <text x="${x + 14}" y="140" font-family="${SANS}" font-size="11"
+            fill="${t.muted}">${sub}</text>
     </g>`;
     })
     .join("");
@@ -154,15 +130,12 @@ export function stats(t, d) {
     w,
     h,
     `${frame(t, w, h, id)}
-  <text x="${padX}" y="40" font-family="${SANS}" font-size="17" font-weight="600"
-        fill="${t.text}">Activity</text>
-  <text x="${w - padX}" y="40" text-anchor="end" font-family="${MONO}" font-size="11"
-        fill="${t.faint}">self-hosted &#183; regenerated daily</text>
-  ${body}
-  ${topSweep(w, id, "9s")}
-  <style>
-    .tile rect:first-of-type { transition: none; }
-  </style>`
+  ${cardTitle(t, PAD + 4, 42, "Activity", {
+    x: w - PAD,
+    text: "SELF-HOSTED &#183; REGENERATED DAILY",
+  })}
+  <line x1="${PAD}" y1="56" x2="${w - PAD}" y2="56" stroke="${t.line}"/>
+  ${body}`
   );
 }
 
@@ -170,22 +143,21 @@ export function stats(t, d) {
 
 export function languages(t, d, count = 8) {
   const w = 1000;
-  const h = 232;
+  const h = 206;
   const id = `l${t.name}`;
-  const padX = 34;
-  const barW = w - padX * 2;
+  const barX = PAD + 4;
+  const barW = w - PAD * 2 - 8;
 
   const top = d.languages.slice(0, count);
-  const shown = top.reduce((a, l) => a + l.pct, 0);
-  const other = Math.max(0, 100 - shown);
-  const segs = other > 0.4 ? [...top, { name: "Other", pct: other, color: t.faint }] : top;
+  const other = Math.max(0, 100 - top.reduce((a, l) => a + l.pct, 0));
+  const segs =
+    other > 0.4 ? [...top, { name: "Other", pct: other, color: t.faint }] : top;
 
-  let x = padX;
+  let x = barX;
   const bar = segs
-    .map((l, i) => {
+    .map((l) => {
       const segW = (l.pct / 100) * barW;
-      const r = `<rect x="${x.toFixed(1)}" y="70" width="${Math.max(segW - 2, 1).toFixed(1)}" height="18"
-             rx="4" fill="${l.color}"/>`;
+      const r = `<rect x="${x.toFixed(1)}" y="66" width="${Math.max(segW - 1.5, 1).toFixed(1)}" height="10" rx="2" fill="${l.color}"/>`;
       x += segW;
       return r;
     })
@@ -195,15 +167,15 @@ export function languages(t, d, count = 8) {
   const colW = barW / cols;
   const legend = segs
     .map((l, i) => {
-      const cx = padX + (i % cols) * colW;
-      const cy = 126 + Math.floor(i / cols) * 30;
+      const cx = barX + (i % cols) * colW;
+      const cy = 116 + Math.floor(i / cols) * 28;
       return `
     <g>
-      <rect x="${cx}" y="${cy - 10}" width="11" height="11" rx="3" fill="${l.color}"/>
-      <text x="${cx + 20}" y="${cy}" font-family="${SANS}" font-size="13.5"
-            fill="${t.text}">${esc(l.name)}</text>
-      <text x="${cx + colW - 26}" y="${cy}" text-anchor="end" font-family="${MONO}"
-            font-size="12.5" fill="${t.muted}">${l.pct.toFixed(1)}%</text>
+      <rect x="${cx}" y="${cy - 9}" width="9" height="9" rx="2" fill="${l.color}"/>
+      <text x="${cx + 17}" y="${cy}" font-family="${SANS}" font-size="12.5"
+            fill="${t.ink}">${esc(l.name)}</text>
+      <text x="${cx + colW - 30}" y="${cy}" text-anchor="end" font-family="${MONO}"
+            font-size="11.5" fill="${t.muted}">${l.pct.toFixed(1)}%</text>
     </g>`;
     })
     .join("");
@@ -212,15 +184,14 @@ export function languages(t, d, count = 8) {
     w,
     h,
     `${frame(t, w, h, id)}
-  <text x="${padX}" y="40" font-family="${SANS}" font-size="17" font-weight="600"
-        fill="${t.text}">Languages</text>
-  <text x="${w - padX}" y="40" text-anchor="end" font-family="${MONO}" font-size="11"
-        fill="${t.faint}">by bytes across ${d.repos.length} repositories</text>
-  <rect x="${padX}" y="70" width="${barW}" height="18" rx="4" fill="${t.tile}"/>
+  ${cardTitle(t, PAD + 4, 42, "Languages", {
+    x: w - PAD,
+    text: `BY BYTES &#183; ${d.repos.length} REPOSITORIES`,
+  })}
+  <line x1="${PAD}" y1="56" x2="${w - PAD}" y2="56" stroke="${t.line}"/>
+  <rect x="${barX}" y="66" width="${barW}" height="10" rx="2" fill="${t.panel}"/>
   ${bar}
-  ${legend}
-  ${topSweep(w, id, "11s")}
-`
+  ${legend}`
   );
 }
 
@@ -228,16 +199,14 @@ export function languages(t, d, count = 8) {
 
 export function heatmap(t, d) {
   const w = 1000;
-  const h = 248;
+  const h = 216;
   const id = `c${t.name}`;
-  const cell = 13;
+  const cell = 12;
   const gap = 3;
-  const padX = 34;
-  const top = 76;
+  const top = 72;
 
   const days = d.calendar;
   const max = days.reduce((m, x) => Math.max(m, x.contributionCount), 0) || 1;
-  const ramp = [t.tile, `${t.brandA}44`, `${t.brandA}80`, `${t.brandA}BB`, t.brandA];
   const level = (n) => {
     if (n <= 0) return 0;
     const q = n / max;
@@ -247,26 +216,23 @@ export function heatmap(t, d) {
     return 1;
   };
 
-  // Align to weeks: index 0 is the first day present, laid out column by column.
   const first = new Date(days[0].date + "T00:00:00Z").getUTCDay();
   let cells = "";
   days.forEach((day, i) => {
     const idx = i + first;
     const col = Math.floor(idx / 7);
     const row = idx % 7;
-    const lv = level(day.contributionCount);
     cells +=
-      `<rect x="${padX + col * (cell + gap)}" y="${top + row * (cell + gap)}" ` +
-      `width="${cell}" height="${cell}" rx="3" fill="${ramp[lv]}" ` +
-      `/>`;
+      `<rect x="${PAD + 4 + col * (cell + gap)}" y="${top + row * (cell + gap)}" ` +
+      `width="${cell}" height="${cell}" rx="2" fill="${t.ramp[level(day.contributionCount)]}"/>`;
   });
 
   const legendY = top + 7 * (cell + gap) + 26;
-  const legendX = w - padX - 150;
-  const legend = ramp
+  const legendX = w - PAD - 132;
+  const legend = t.ramp
     .map(
       (c, i) =>
-        `<rect x="${legendX + 34 + i * (cell + 4)}" y="${legendY - 11}" width="${cell}" height="${cell}" rx="3" fill="${c}"/>`
+        `<rect x="${legendX + 32 + i * (cell + 3)}" y="${legendY - 10}" width="${cell}" height="${cell}" rx="2" fill="${c}" stroke="${t.line}"/>`
     )
     .join("");
 
@@ -274,16 +240,15 @@ export function heatmap(t, d) {
     w,
     h,
     `${frame(t, w, h, id)}
-  <text x="${padX}" y="40" font-family="${SANS}" font-size="17" font-weight="600"
-        fill="${t.text}">${human(d.contributionsYear)} contributions in the last year</text>
-  <text x="${w - padX}" y="40" text-anchor="end" font-family="${MONO}" font-size="11"
-        fill="${t.faint}">${d.activeDays} active days &#183; longest streak ${d.longestStreak}d</text>
+  ${cardTitle(t, PAD + 4, 42, `${human(d.contributionsYear)} contributions in the last year`, {
+    x: w - PAD,
+    text: `${d.activeDays} ACTIVE DAYS &#183; LONGEST ${d.longestStreak}D`,
+  })}
+  <line x1="${PAD}" y1="56" x2="${w - PAD}" y2="56" stroke="${t.line}"/>
   ${cells}
-  <text x="${legendX}" y="${legendY}" font-family="${SANS}" font-size="11.5" fill="${t.faint}">Less</text>
+  <text x="${legendX}" y="${legendY}" font-family="${SANS}" font-size="11" fill="${t.faint}">Less</text>
   ${legend}
-  <text x="${w - padX}" y="${legendY}" text-anchor="end" font-family="${SANS}" font-size="11.5"
-        fill="${t.faint}">More</text>
-  ${topSweep(w, id, "13s")}
-`
+  <text x="${w - PAD}" y="${legendY}" text-anchor="end" font-family="${SANS}" font-size="11"
+        fill="${t.faint}">More</text>`
   );
 }

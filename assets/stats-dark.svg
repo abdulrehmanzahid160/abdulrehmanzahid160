@@ -1,122 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="214" viewBox="0 0 1000 214" role="img" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="176" viewBox="0 0 1000 176" role="img" fill="none">
   <defs>
-    <linearGradient id="brand-sdark" x1="0" y1="0" x2="1" y2="0.6">
-      <stop offset="0%" stop-color="#A855F7"/>
-      <stop offset="55%" stop-color="#F472B6"/>
-      <stop offset="100%" stop-color="#22D3EE"/>
-    </linearGradient>
-    <linearGradient id="sweep-sdark" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#A855F7" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#A855F7" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="glow-sdark" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.13"/>
-      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glow2-sdark" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.10400000000000001"/>
-      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots-sdark" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1.5" fill="#8B5CF6" opacity="0.07"/>
-    </pattern>
     <clipPath id="clip-sdark">
-      <rect x="0.5" y="0.5" width="999" height="213" rx="16"/>
+      <rect x="0.5" y="0.5" width="999" height="175" rx="10"/>
     </clipPath>
   </defs>
   <g clip-path="url(#clip-sdark)">
-    <rect width="1000" height="214" fill="#0D1117"/>
-    <rect width="1000" height="214" fill="url(#dots-sdark)"/>
-    <ellipse cx="80" cy="-10.700000000000001" rx="300" ry="132.68" fill="url(#glow-sdark)"/>
-    <ellipse cx="970" cy="224.70000000000002" rx="240" ry="128.4" fill="url(#glow2-sdark)"/>
+    <rect width="1000" height="176" fill="#0D1117"/>
+    <rect x="0" y="0" width="3" height="176" fill="#818CF8"/>
   </g>
-  <rect x="0.5" y="0.5" width="999" height="213" rx="16"
-        fill="none" stroke="#1F2732"/>
-  <text x="34" y="40" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="17" font-weight="600"
+  <rect x="0.5" y="0.5" width="999" height="175" rx="10"
+        fill="none" stroke="#21262D"/>
+  
+  <text x="36" y="42" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="15" font-weight="600"
         fill="#E6EDF3">Activity</text>
-  <text x="966" y="40" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11"
-        fill="#6E7681">self-hosted &#183; regenerated daily</text>
+  <text x="968" y="42" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace"
+             font-size="10.5" fill="#6E7681">SELF-HOSTED &#183; REGENERATED DAILY</text>
+  <line x1="32" y1="56" x2="968" y2="56" stroke="#21262D"/>
   
-    <g class="tile">
-      <rect x="34" y="62" width="143.66666666666666" height="112" rx="12"
-            fill="#131A26" stroke="#222B38"/>
-      <rect x="34" y="62" width="143.66666666666666" height="2.5" rx="1.2" fill="url(#brand-sdark)" opacity=".85"/>
-      <text x="52" y="96" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" letter-spacing="1.5"
-            fill="#8B949E">CONTRIBUTIONS</text>
-      <text x="52" y="136" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="32" font-weight="700"
-            fill="#E6EDF3">192</text>
-      <text x="52" y="158" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11.5"
-            fill="#6E7681">past 12 months</text>
-    </g>
-    <g class="tile">
-      <rect x="191.66666666666666" y="62" width="143.66666666666666" height="112" rx="12"
-            fill="#131A26" stroke="#222B38"/>
-      <rect x="191.66666666666666" y="62" width="143.66666666666666" height="2.5" rx="1.2" fill="url(#brand-sdark)" opacity=".85"/>
-      <text x="209.66666666666666" y="96" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" letter-spacing="1.5"
-            fill="#8B949E">COMMITS</text>
-      <text x="209.66666666666666" y="136" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="32" font-weight="700"
-            fill="#E6EDF3">172</text>
-      <text x="209.66666666666666" y="158" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11.5"
-            fill="#6E7681">past 12 months</text>
-    </g>
-    <g class="tile">
-      <rect x="349.3333333333333" y="62" width="143.66666666666666" height="112" rx="12"
-            fill="#131A26" stroke="#222B38"/>
-      <rect x="349.3333333333333" y="62" width="143.66666666666666" height="2.5" rx="1.2" fill="url(#brand-sdark)" opacity=".85"/>
-      <text x="367.3333333333333" y="96" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" letter-spacing="1.5"
-            fill="#8B949E">REPOSITORIES</text>
-      <text x="367.3333333333333" y="136" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="32" font-weight="700"
+    <g>
+      <text x="46" y="84" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" letter-spacing="1.2"
+            fill="#6E7681">CONTRIBUTIONS</text>
+      <text x="45" y="120" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="29" font-weight="700"
+            fill="#E6EDF3">196</text>
+      <text x="46" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11"
+            fill="#9198A1">past 12 months</text>
+    </g><line x1="187.66666666666666" y1="66" x2="187.66666666666666" y2="146" stroke="#21262D"/>
+    <g>
+      <text x="202.16666666666666" y="84" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" letter-spacing="1.2"
+            fill="#6E7681">COMMITS</text>
+      <text x="201.16666666666666" y="120" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="29" font-weight="700"
+            fill="#E6EDF3">176</text>
+      <text x="202.16666666666666" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11"
+            fill="#9198A1">past 12 months</text>
+    </g><line x1="343.8333333333333" y1="66" x2="343.8333333333333" y2="146" stroke="#21262D"/>
+    <g>
+      <text x="358.3333333333333" y="84" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" letter-spacing="1.2"
+            fill="#6E7681">REPOSITORIES</text>
+      <text x="357.3333333333333" y="120" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="29" font-weight="700"
             fill="#E6EDF3">20</text>
-      <text x="367.3333333333333" y="158" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11.5"
-            fill="#6E7681">15 public</text>
-    </g>
-    <g class="tile">
-      <rect x="507" y="62" width="143.66666666666666" height="112" rx="12"
-            fill="#131A26" stroke="#222B38"/>
-      <rect x="507" y="62" width="143.66666666666666" height="2.5" rx="1.2" fill="url(#brand-sdark)" opacity=".85"/>
-      <text x="525" y="96" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" letter-spacing="1.5"
-            fill="#8B949E">PULL REQUESTS</text>
-      <text x="525" y="136" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="32" font-weight="700"
+      <text x="358.3333333333333" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11"
+            fill="#9198A1">15 public</text>
+    </g><line x1="500" y1="66" x2="500" y2="146" stroke="#21262D"/>
+    <g>
+      <text x="514.5" y="84" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" letter-spacing="1.2"
+            fill="#6E7681">PULL REQUESTS</text>
+      <text x="513.5" y="120" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="29" font-weight="700"
             fill="#E6EDF3">17</text>
-      <text x="525" y="158" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11.5"
-            fill="#6E7681">opened</text>
-    </g>
-    <g class="tile">
-      <rect x="664.6666666666666" y="62" width="143.66666666666666" height="112" rx="12"
-            fill="#131A26" stroke="#222B38"/>
-      <rect x="664.6666666666666" y="62" width="143.66666666666666" height="2.5" rx="1.2" fill="url(#brand-sdark)" opacity=".85"/>
-      <text x="682.6666666666666" y="96" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" letter-spacing="1.5"
-            fill="#8B949E">LANGUAGES</text>
-      <text x="682.6666666666666" y="136" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="32" font-weight="700"
+      <text x="514.5" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11"
+            fill="#9198A1">opened</text>
+    </g><line x1="656.1666666666666" y1="66" x2="656.1666666666666" y2="146" stroke="#21262D"/>
+    <g>
+      <text x="670.6666666666666" y="84" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" letter-spacing="1.2"
+            fill="#6E7681">LANGUAGES</text>
+      <text x="669.6666666666666" y="120" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="29" font-weight="700"
             fill="#E6EDF3">18</text>
-      <text x="682.6666666666666" y="158" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11.5"
-            fill="#6E7681">shipped in</text>
-    </g>
-    <g class="tile">
-      <rect x="822.3333333333333" y="62" width="143.66666666666666" height="112" rx="12"
-            fill="#131A26" stroke="#222B38"/>
-      <rect x="822.3333333333333" y="62" width="143.66666666666666" height="2.5" rx="1.2" fill="url(#brand-sdark)" opacity=".85"/>
-      <text x="840.3333333333333" y="96" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" letter-spacing="1.5"
-            fill="#8B949E">LONGEST STREAK</text>
-      <text x="840.3333333333333" y="136" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="32" font-weight="700"
+      <text x="670.6666666666666" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11"
+            fill="#9198A1">shipped in</text>
+    </g><line x1="812.3333333333333" y1="66" x2="812.3333333333333" y2="146" stroke="#21262D"/>
+    <g>
+      <text x="826.8333333333333" y="84" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" letter-spacing="1.2"
+            fill="#6E7681">LONGEST STREAK</text>
+      <text x="825.8333333333333" y="120" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="29" font-weight="700"
             fill="#E6EDF3">11d</text>
-      <text x="840.3333333333333" y="158" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11.5"
-            fill="#6E7681">37 active days</text>
+      <text x="826.8333333333333" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif" font-size="11"
+            fill="#9198A1">37 active days</text>
     </g>
-  
-  <g clip-path="url(#clip-sdark)">
-    <rect class="sweep" x="0" y="0" width="450" height="2" fill="url(#sweep-sdark)"/>
-  </g>
-  <style>
-    .sweep { animation: sweep-sdark 9s cubic-bezier(.45,0,.25,1) infinite; }
-    @keyframes sweep-sdark {
-      0%   { transform: translateX(-450px); }
-      100% { transform: translateX(1000px); }
-    }
-    @media (prefers-reduced-motion: reduce) { .sweep { animation: none; opacity: .5; } }
-  </style>
-  <style>
-    .tile rect:first-of-type { transition: none; }
-  </style>
 </svg>

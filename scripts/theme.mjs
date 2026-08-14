@@ -1,40 +1,35 @@
-// Shared design tokens. One palette per scheme, so a card never defines a
-// colour twice and dark/light stay in lockstep.
+// Design tokens. Light is the primary scheme; the dark variant is a restrained
+// mirror of it, not a neon repaint.
+//
+// Deliberately austere: one accent colour, hairline rules, no glow, no
+// multi-stop gradients. Decoration is what makes a profile look generated.
 
 export const THEMES = {
-  dark: {
-    name: "dark",
-    bg: "#0D1117",
-    panel: "#0F1520",
-    grid: "#8B5CF6",
-    gridOpacity: 0.07,
-    stroke: "#1F2732",
-    text: "#E6EDF3",
-    muted: "#8B949E",
-    faint: "#6E7681",
-    brandA: "#A855F7",
-    brandB: "#22D3EE",
-    accent: "#F472B6",
-    glow: 0.13,
-    tile: "#131A26",
-    tileStroke: "#222B38",
-  },
   light: {
     name: "light",
     bg: "#FFFFFF",
-    panel: "#F6F8FA",
-    grid: "#7C3AED",
-    gridOpacity: 0.09,
-    stroke: "#D1D9E0",
-    text: "#1F2328",
-    muted: "#59636E",
-    faint: "#818B98",
-    brandA: "#7C3AED",
-    brandB: "#0891B2",
-    accent: "#DB2777",
-    glow: 0.07,
-    tile: "#F6F8FA",
-    tileStroke: "#D8DEE4",
+    panel: "#F8FAFC",
+    ink: "#0F172A",
+    muted: "#475569",
+    faint: "#94A3B8",
+    line: "#E2E8F0",
+    rule: "#CBD5E1",
+    accent: "#4F46E5",
+    accentSoft: "#EEF2FF",
+    ramp: ["#F1F5F9", "#C7D2FE", "#A5B4FC", "#818CF8", "#4F46E5"],
+  },
+  dark: {
+    name: "dark",
+    bg: "#0D1117",
+    panel: "#151B23",
+    ink: "#E6EDF3",
+    muted: "#9198A1",
+    faint: "#6E7681",
+    line: "#21262D",
+    rule: "#30363D",
+    accent: "#818CF8",
+    accentSoft: "#1D2333",
+    ramp: ["#191F28", "#2E3555", "#454F86", "#5C68B5", "#818CF8"],
   },
 };
 
@@ -43,7 +38,6 @@ export const SANS =
 export const MONO =
   "ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',Menlo,monospace";
 
-/** XML-escape text that came from the API. */
 export function esc(s) {
   return String(s ?? "")
     .replace(/&/g, "&amp;")
@@ -53,7 +47,6 @@ export function esc(s) {
     .replace(/'/g, "&apos;");
 }
 
-/** 1234567 -> "1.2M", 12345 -> "12.3k" */
 export function human(n) {
   if (n === null || n === undefined) return "0";
   if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
@@ -61,60 +54,33 @@ export function human(n) {
   return String(n);
 }
 
-/**
- * The shared chrome every card sits on: background, violet dot-matrix, a soft
- * corner glow and a hairline border.
- */
-export function frame(t, w, h, id) {
+/** Card background: flat panel, hairline border, one accent rule down the left. */
+export function frame(t, w, h, id, { accentRule = true } = {}) {
   return `
   <defs>
-    <linearGradient id="brand-${id}" x1="0" y1="0" x2="1" y2="0.6">
-      <stop offset="0%" stop-color="${t.brandA}"/>
-      <stop offset="55%" stop-color="${t.accent}"/>
-      <stop offset="100%" stop-color="${t.brandB}"/>
-    </linearGradient>
-    <linearGradient id="sweep-${id}" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="${t.brandA}" stop-opacity="0"/>
-      <stop offset="50%" stop-color="${t.brandA}" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="${t.brandB}" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="glow-${id}" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="${t.brandA}" stop-opacity="${t.glow}"/>
-      <stop offset="100%" stop-color="${t.brandA}" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glow2-${id}" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="${t.brandB}" stop-opacity="${t.glow * 0.8}"/>
-      <stop offset="100%" stop-color="${t.brandB}" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots-${id}" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1.5" fill="${t.grid}" opacity="${t.gridOpacity}"/>
-    </pattern>
     <clipPath id="clip-${id}">
-      <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="16"/>
+      <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="10"/>
     </clipPath>
   </defs>
   <g clip-path="url(#clip-${id})">
     <rect width="${w}" height="${h}" fill="${t.bg}"/>
-    <rect width="${w}" height="${h}" fill="url(#dots-${id})"/>
-    <ellipse cx="${w * 0.08}" cy="${-h * 0.05}" rx="${w * 0.30}" ry="${h * 0.62}" fill="url(#glow-${id})"/>
-    <ellipse cx="${w * 0.97}" cy="${h * 1.05}" rx="${w * 0.24}" ry="${h * 0.6}" fill="url(#glow2-${id})"/>
+    ${accentRule ? `<rect x="0" y="0" width="3" height="${h}" fill="${t.accent}"/>` : ""}
   </g>
-  <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="16"
-        fill="none" stroke="${t.stroke}"/>`;
+  <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="10"
+        fill="none" stroke="${t.line}"/>`;
 }
 
-/** The animated hairline that runs along the top edge of every card. */
-export function topSweep(w, id, dur = "7s") {
+/** Section label used at the top-left of every card. */
+export function cardTitle(t, x, y, text, right) {
   return `
-  <g clip-path="url(#clip-${id})">
-    <rect class="sweep" x="0" y="0" width="${w * 0.45}" height="2" fill="url(#sweep-${id})"/>
-  </g>
-  <style>
-    .sweep { animation: sweep-${id} ${dur} cubic-bezier(.45,0,.25,1) infinite; }
-    @keyframes sweep-${id} {
-      0%   { transform: translateX(${-w * 0.45}px); }
-      100% { transform: translateX(${w}px); }
-    }
-    @media (prefers-reduced-motion: reduce) { .sweep { animation: none; opacity: .5; } }
-  </style>`;
+  <text x="${x}" y="${y}" font-family="${SANS}" font-size="15" font-weight="600"
+        fill="${t.ink}">${text}</text>
+  ${
+    right
+      ? `<text x="${right.x}" y="${y}" text-anchor="end" font-family="${MONO}"
+             font-size="10.5" fill="${t.faint}">${right.text}</text>`
+      : ""
+  }`;
+
+
 }

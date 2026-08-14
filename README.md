@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-light.svg">
-  <img alt="Abdul Rehman — AI/ML engineer, full-stack and Flutter developer" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-light.svg?v=2">
+  <img alt="Abdul Rehman — AI/ML engineer, full-stack and Flutter developer" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-light.svg?v=2" width="100%">
 </picture>
 
 <div align="center">
@@ -14,7 +14,7 @@
 
 ## What I'm working on
 
-Final-year BS Artificial Intelligence at **NUTECH, Islamabad**. Most of my time goes to
+Second-year BS Artificial Intelligence at **NUTECH, Islamabad**. Most of my time goes to
 **SignalWatch** — regulatory intelligence for independent medical-device consultants — and to
 agent tooling around the Model Context Protocol.
 
@@ -86,29 +86,34 @@ parent messaging and fee automation for coaching centres).
 | [PortFolio](https://github.com/abdulrehmanzahid160/PortFolio) | Next.js · GSAP · Lenis | [abdulrehman160.vercel.app](https://abdulrehman160.vercel.app/) — SSG, smooth scroll, scramble text |
 | [healix](https://github.com/abdulrehmanzahid160/healix) | FastAPI · PostgreSQL | Async backend for an AI medical assistant — JWT auth, health metrics |
 | [my-ml-internship](https://github.com/abdulrehmanzahid160/my-ml-internship) | Jupyter · scikit-learn | FlyRank internship — search ranking and discoverability on anonymised data |
-| [perfect-science-academy](https://github.com/abdulrehmanzahid160/perfect-science-academy) | HTML · CSS | Academy site, later rebuilt as a management system |
+| [Healix-updated](https://github.com/abdulrehmanzahid160/Healix-updated) | Flutter | Flutter client for the Healix backend |
+| [TeeropAppDevelopementInternship](https://github.com/abdulrehmanzahid160/TeeropAppDevelopementInternship) | Flutter | App development internship at Teerop |
+| [perfect-science-academy](https://github.com/abdulrehmanzahid160/perfect-science-academy) | HTML · CSS | Academy site — later rebuilt as a management system *(private)* |
+| [linkedin-mcp-privacy](https://github.com/abdulrehmanzahid160/linkedin-mcp-privacy) | HTML | Privacy policy host required for LinkedIn API partner review |
 | [mini-backend](https://github.com/abdulrehmanzahid160/mini-backend) | Flask | Two endpoints. Deliberately the smallest thing that runs. |
+| edumaster *(private)* | Flutter | Education platform, in progress |
+| Leetcode-Practise *(private)* | Java | Data structures and algorithms practice |
 
 ---
 
 ## Stats
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/stats-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/stats-light.svg">
-  <img alt="Activity" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/stats-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/stats-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/stats-light.svg?v=2">
+  <img alt="Activity" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/stats-light.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/languages-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/languages-light.svg">
-  <img alt="Languages" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/languages-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/languages-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/languages-light.svg?v=2">
+  <img alt="Languages" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/languages-light.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/heatmap-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/heatmap-light.svg">
-  <img alt="Contribution heatmap" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/heatmap-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/heatmap-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/heatmap-light.svg?v=2">
+  <img alt="Contribution heatmap" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/heatmap-light.svg?v=2" width="100%">
 </picture>
 
 <picture>
