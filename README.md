@@ -5,7 +5,7 @@
 </picture>
 
 <div align="center">
-  <a href="https://abdulrehman160.vercel.app/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-abdulrehman160.vercel.app-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://rehmandev.online"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-rehmandev.online-4F46E5?style=for-the-badge&logo=vercel&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/abdul-rehman-5845373a4"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Abdul%20Rehman-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:abdulrehman.zahid160@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-abdulrehman.zahid160%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </div>
@@ -83,7 +83,7 @@ parent messaging and fee automation for coaching centres).
 | Project | Stack | What it is |
 | :-- | :-- | :-- |
 | [SehatConnectPK](https://github.com/abdulrehmanzahid160/SehatConnectPK) | Spring Boot · Flutter | REST layer mapping patients, doctors and clinics |
-| [PortFolio](https://github.com/abdulrehmanzahid160/PortFolio) | Next.js · GSAP · Lenis | [abdulrehman160.vercel.app](https://abdulrehman160.vercel.app/) — SSG, smooth scroll, scramble text |
+| [PortFolio](https://github.com/abdulrehmanzahid160/PortFolio) | Next.js · GSAP · Lenis | [rehmandev.online](https://rehmandev.online) — SSG, smooth scroll, scramble text |
 | [healix](https://github.com/abdulrehmanzahid160/healix) | FastAPI · PostgreSQL | Async backend for an AI medical assistant — JWT auth, health metrics |
 | [my-ml-internship](https://github.com/abdulrehmanzahid160/my-ml-internship) | Jupyter · scikit-learn | FlyRank internship — search ranking and discoverability on anonymised data |
 | [Healix-updated](https://github.com/abdulrehmanzahid160/Healix-updated) | Flutter | Flutter client for the Healix backend |
