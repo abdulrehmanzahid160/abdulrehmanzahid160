@@ -1,29 +1,35 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-light.svg?v=2">
-  <img alt="Abdul Rehman — AI/ML engineer, full-stack and Flutter developer" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/hero-light.svg?v=2" width="100%">
-</picture>
+<img alt="Abdul Rehman" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/banner.svg?v=3" width="100%">
 
 <div align="center">
-  <a href="https://rehmandev.online"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-rehmandev.online-4F46E5?style=for-the-badge&logo=vercel&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/abdul-rehman-5845373a4"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Abdul%20Rehman-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="mailto:abdulrehman.zahid160@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-abdulrehman.zahid160%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </div>
 
----
+<br>
 
-## What I'm working on
+<table>
+<tr>
+<td valign="top" width="62%">
 
-Second-year BS Artificial Intelligence at **NUTECH, Islamabad**. Most of my time goes to
-**SignalWatch** — regulatory intelligence for independent medical-device consultants — and to
-agent tooling around the Model Context Protocol.
+### A little more about me
 
-The thread through all of it: I like problems where being *approximately* right is the same as
-being wrong. Regulatory data, financial ledgers, medical records. Systems where you have to be
-able to show your working.
+Full-Stack Developer &amp; AI/ML Enthusiast, second year at NUTECH Islamabad.
 
-**Open to** internships and graduate software roles &nbsp;·&nbsp; **Reach me at**
-[abdulrehman.zahid160@gmail.com](mailto:abdulrehman.zahid160@gmail.com)
+- 🔭 Currently building **SignalWatch** — regulatory intelligence for independent medical-device consultants
+- 🌱 Learning agent tooling around the **Model Context Protocol**
+- 🎓 2nd-year BS Artificial Intelligence @ NUTECH, Islamabad
+- 💡 I like problems where being *approximately* right is the same as being wrong
+- 💬 Ask me about FDA regulatory data, Flutter, or MCP servers
+- 📫 Reach me at [abdulrehman.zahid160@gmail.com](mailto:abdulrehman.zahid160@gmail.com)
+- 🌐 Portfolio: [rehmandev.online](https://rehmandev.online)
+
+**Open to** internships and graduate software roles.
+
+</td>
+<td valign="top" width="38%" align="center">
+<img alt="" src="https://raw.githubusercontent.com/abdulrehmanzahid160/abdulrehmanzahid160/main/assets/mascot.svg?v=3" width="290">
+</td>
+</tr>
+</table>
 
 ---
 
